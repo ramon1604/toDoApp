@@ -6,7 +6,6 @@ let { passwordProtected } = require('./server/js/functions')
 let sanitizeHTML = require('sanitize-html')
 
 let app = express()
-
 let db
 
 let connectDb = async () => {
