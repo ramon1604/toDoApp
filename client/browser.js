@@ -1,5 +1,5 @@
 //Initial page render
-let initialItems = items.map((item) => itemsToInsert(item)).join('')
+let initialItems = (JSON.parse(atob(items))).map((item) => itemsToInsert(item)).join('')
 document.querySelector('ul').insertAdjacentHTML("beforeend", initialItems)
 
 document.addEventListener("click", (e) => {

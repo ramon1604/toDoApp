@@ -24,7 +24,7 @@ module.exports.mainPage = (items)=> {
 
           </div>
           <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-          <script>let items = ${JSON.stringify(items)}</script>
+          <script>let items = "${Buffer.from(JSON.stringify(items)).toString('base64')}"</script>
           <script src="functions.js"></script>
           <script src="browser.js"></script>
         </body>
